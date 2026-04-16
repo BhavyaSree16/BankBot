@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="Customer Module Tests(failed)">
+  <test thread-count="5" name="Account Module Tests(failed)">
     <classes>
-      <class name="tests.CustomerTest">
+      <class name="tests.AccountTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="customerManagementFlow"/>
+          <include name="accountManagementFlow"/>
         </methods>
-      </class> <!-- tests.CustomerTest -->
+      </class> <!-- tests.AccountTest -->
     </classes>
-  </test> <!-- Customer Module Tests(failed) -->
+  </test> <!-- Account Module Tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

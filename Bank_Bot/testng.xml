@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
+<listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
 <!-- Test Module-1 -->
-
   <!-- <test name="Login Tests">
         <classes>
             <class name="tests.LoginTest"/>
         </classes>
     </test> -->
-    
-    <listeners>
-        <listener class-name="listeners.TestListener"/>
-    </listeners>
-
-    <test name="Customer Module Tests">
+<!-- Test Module-2 -->
+    <!-- <test name="Customer Module Tests">
         <classes>
             <class name="tests.CustomerTest"/>
+        </classes>
+    </test> -->
+ <!-- Test Module-3-->   
+    <test name="Account Module Tests">
+        <classes>
+            <class name="tests.AccountTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

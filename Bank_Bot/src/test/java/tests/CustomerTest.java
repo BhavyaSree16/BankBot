@@ -61,12 +61,12 @@ public class CustomerTest extends BaseTest {
 
         try {
             Alert alert = driver.switchTo().alert();
-            System.out.println("🔔 Duplicate Alert: " + alert.getText());
+            System.out.println("Duplicate Alert: " + alert.getText());
             alert.accept();
             isDuplicateHandled = true;
 
         } catch (Exception e) {
-            System.out.println("⚠️ No alert, checking page...");
+            System.out.println("No alert, checking page...");
         }
 
         if (!isDuplicateHandled) {

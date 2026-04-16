@@ -74,7 +74,7 @@ public class AccountTest extends BaseTest {
         // 🔹 INVALID CUSTOMER ID TEST
         System.out.println("🔹 Testing invalid customer ID...");
         nap.clickNewAccount();
-        nap.createAccount("999999");
+        nap.createAccount(ConfigReader.get("invalidCustomerId"));
 
         try {
             Alert alert = driver.switchTo().alert();

@@ -4,6 +4,29 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Login Tests(failed)">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyLogin" invocation-numbers="1 2"/>
+          <include name="verifyLogout"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+  <test thread-count="5" name="Customer Module Tests(failed)">
+    <classes>
+      <class name="tests.CustomerTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="customerManagementFlow"/>
+        </methods>
+      </class> <!-- tests.CustomerTest -->
+    </classes>
+  </test> <!-- Customer Module Tests(failed) -->
   <test thread-count="5" name="Account Module Tests(failed)">
     <classes>
       <class name="tests.AccountTest">
@@ -15,4 +38,15 @@
       </class> <!-- tests.AccountTest -->
     </classes>
   </test> <!-- Account Module Tests(failed) -->
+  <test thread-count="5" name="Fund Transfer Tests(failed)">
+    <classes>
+      <class name="tests.FundTransferTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="fundTransferFlow"/>
+        </methods>
+      </class> <!-- tests.FundTransferTest -->
+    </classes>
+  </test> <!-- Fund Transfer Tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

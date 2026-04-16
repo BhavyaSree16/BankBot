@@ -18,21 +18,21 @@ public class LoginTest extends BaseTest {
         return ExcelUtil.getLoginData();
     }
 
-    // 🔹 LOGIN TEST (VALID + INVALID + BLANK)
+    // LOGIN TEST (VALID + INVALID + BLANK)
     @Test(dataProvider = "loginData")
     public void verifyLogin(String user, String pass, String expected) {
 
         LoginPage lp = new LoginPage(driver);
         lp.login(user, pass);
 
-        // ✅ VALID LOGIN
+        // VALID LOGIN
         if (expected.equalsIgnoreCase("valid")) {
 
             Assert.assertTrue(driver.getTitle().contains("Manager"),
                     "Login failed for valid credentials");
         }
 
-        // ✅ INVALID + BLANK LOGIN
+        // INVALID + BLANK LOGIN
         else if (expected.equalsIgnoreCase("invalid") || expected.equalsIgnoreCase("blank")) {
 
             try {
@@ -40,16 +40,16 @@ public class LoginTest extends BaseTest {
 
                 // 🔔 Read alert text
                 String alertText = alert.getText();
-                System.out.println("🔔 Alert message: " + alertText);
+                System.out.println("Alert message: " + alertText);
 
-                // 📸 Screenshot before handling alert
+                // Screenshot before handling alert
                 ScreenshotUtil.capture(driver, "Alert_" + expected);
 
-                // ✅ Validate alert message
+                // Validate alert message
                 Assert.assertTrue(alertText.contains("User or Password is not valid"),
                         "Incorrect alert message");
 
-                // ✔️ Accept alert
+                // Accept alert
                 alert.accept();
 
             } catch (Exception e) {
@@ -76,7 +76,7 @@ public class LoginTest extends BaseTest {
             String alertText = alert.getText();
             System.out.println("Logout Alert: " + alertText);
 
-            // 📸 Screenshot
+            // Screenshot
             ScreenshotUtil.capture(driver, "Logout");
 
             alert.accept();

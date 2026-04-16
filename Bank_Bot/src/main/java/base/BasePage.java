@@ -9,7 +9,7 @@ import utils.ConfigReader;
 
 public class BasePage {
 
-    protected WebDriver driver;   // ✅ FIXED HERE
+    protected WebDriver driver;
     WebDriverWait wait;
 
     public BasePage(WebDriver driver) {
@@ -28,5 +28,11 @@ public class BasePage {
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
+    }
+
+    // ✅ ADD THIS METHOD (FIX)
+    public String getText(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElement(locator).getText();
     }
 }

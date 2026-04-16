@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
         return ExcelUtil.getLoginData();
     }
 
-    // LOGIN TEST (VALID + INVALID + BLANK)
+    // 🔹 LOGIN TEST (VALID + INVALID + BLANK)
     @Test(dataProvider = "loginData")
     public void verifyLogin(String user, String pass, String expected) {
 

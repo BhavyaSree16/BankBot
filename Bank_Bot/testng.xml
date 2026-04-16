@@ -4,9 +4,19 @@
 
 <!-- Test Module-1 -->
 
-  <test name="Login Tests">
+  <!-- <test name="Login Tests">
         <classes>
             <class name="tests.LoginTest"/>
+        </classes>
+    </test> -->
+    
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <test name="Customer Module Tests">
+        <classes>
+            <class name="tests.CustomerTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

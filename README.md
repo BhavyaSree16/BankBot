@@ -16,6 +16,29 @@ This project automates end-to-end workflows including:
 🔗 https://demo.guru99.com/V4/index.php
 
 ---
+## Important Note on Credentials
+
+The login credentials used in this project are based on the Guru99 demo application.
+
+🔹 **Username and password are temporary** and may change or expire approximately every **20 days**.
+
+🔹 If tests fail due to login issues, please generate new credentials from the application given above
+
+### Steps to Update Credentials
+
+1. Visit the Guru99 demo site
+2. Register for new login credentials
+3. Update the following fields in `config.properties`:
+
+```
+user=YOUR_NEW_USERNAME
+pass=YOUR_NEW_PASSWORD
+```
+
+---
+
+*Tip:* This framework is designed to be **config-driven**, so updating credentials in one place will reflect across all tests.
+
 ## Objectives
 
 * Build a reusable and scalable automation framework
